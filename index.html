@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Neural Networks</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Aim section -->
+        <p>Aim: Train app to predict the <i> number</i>written
+            <br> While Guessing, if guess is right press Yes,
+            <br> else choose number from list, press Submit, then No</p>
+        <!-- Display section -->
+        <h3 id="displayStep">Draw '0' then press input button</h3>
+        <!-- Input section -->
+        <button class="btn-input" onclick="inputDigit()">Input</button>
+                
+        <div class="container">
+            <!-- Canvas section -->
+            <canvas id="script"></canvas>
+            <script src="script.js"></script>   
+            <!-- Restart button -->
+            <button class="btn-start" onclick=document.location.reload(true)>
+                <img src="./icon-start.png">
+            </button>
+        </div>
+
+        <!-- Guess section -->
+        <div>
+            <h2 id="checkingGuess"></h2>
+            <button class="btn btn-Yes" onclick="guessedRight()">Yes</button>
+            <button class="btn btn-No" onclick="guessedWrong()">No</button>
+            <!-- <input class="input" type=text list=value> -->
+            <select id="input" class="input" name="input" id="input">
+                <datalist>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </datalist>
+            </select>
+            <input class="submit" type="submit" value="Submit" onclick="getValueFromCB()">
+        </div>  
+    </body>
+</html>
